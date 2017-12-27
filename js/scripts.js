@@ -28,9 +28,8 @@ console.log('Po sortowaniu: ' + allNames4);
 var allNames1 = allNames.slice();
 
 console.log(allNames1);
-
 var filteredByM = allNames1.filter(function (el, i) {
-	return (el.charAt(el.i + 1) !== 'M')
+	return el.charAt(0) !== 'M';
 });
 console.log('Filtered by M: ' + filteredByM);
 
@@ -38,8 +37,8 @@ console.log('Filtered by M: ' + filteredByM);
 // imiona dłuzsze niz 5 liter
 
 var allNames5 = allNames.slice();
-var filter = allNames5.filter(function (el) {
-	return (el.length) > 5;
+var filter = allNames5.filter(function (el, i) {
+	return el.length > 5;
 });
 console.log('letter', filter);
 
@@ -54,7 +53,7 @@ console.log(allNames2);
 
 var allNames6 = allNames.slice();
 var letterK = allNames6.filter(function (el, i) {
-	return (el.charAt(el.i) == "K")
+	return (el.charAt(0) == "K")
 });
 console.log('letter K:', letterK);
 
